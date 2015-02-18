@@ -12,6 +12,7 @@ class Admin extends Application {
     function __construct()
     {
 	parent::__construct();
+        $this->load->helper('formfields');
     }
     
     //-------------------------------------------------------------
