@@ -22,7 +22,6 @@ class Viewer extends Application {
     {
 	$this->data['pagebody'] = 'homepage';    // this is the view we want shown
 	$this->data['authors'] = $this->quotes->all();
-        $this->caboose->needed('jrating', 'hollywood'); //invoke ratings widget
 	$this->render();
     }
 
@@ -31,6 +30,7 @@ class Viewer extends Application {
     {
 	$this->data['pagebody'] = 'justone';    // this is the view we want shown
 	$this->data = array_merge($this->data, (array) $this->quotes->get($id));
+        $this->caboose->needed('jrating', 'hollywood'); //invoke ratings widget
 	$this->render();
     }
 
