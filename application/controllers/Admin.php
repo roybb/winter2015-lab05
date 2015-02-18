@@ -19,7 +19,9 @@ class Admin extends Application {
     //-------------------------------------------------------------
     
     function index() {
-        $this->data['pagebody'] = 'homepage';
+        $this->data['title'] = 'Quotations Maintenance';
+        $this->data['quotes'] = $this->quotes->all();
+        $this->data['pagebody'] = 'admin_list'; 
         $this->render();
     }
 }
