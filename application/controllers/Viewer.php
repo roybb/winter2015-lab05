@@ -22,6 +22,7 @@ class Viewer extends Application {
     {
 	$this->data['pagebody'] = 'homepage';    // this is the view we want shown
 	$this->data['authors'] = $this->quotes->all();
+        $this->caboose->needed('jrating', 'hollywood'); //invoke ratings widget
 	$this->render();
     }
 
