@@ -39,6 +39,7 @@ class Admin extends Application {
         $this->data['fmug'] = makeTextField('Picture', 'mug', $quote->mug);
         $this->data['fwhat'] = makeTextArea('The Quote', 'what', $quote->what);
         $this->data['pagebody'] = 'quote_edit';
+        $this->data['fsubmit'] = makeSubmitButton('Process Quote', "Click here to validate the quotation data", 'btn-success');
         $this->render();
     }
 }
